@@ -1,0 +1,19 @@
+{
+  "name": "tw-now-website",
+  "version": "1.0.0",
+  "description": "Website for ThoughtWorks NOW (Network of Women)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThoughtWorksInc/now.git"
+  },
+  "author": "ThoughtWorks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThoughtWorksInc/now/issues"
+  },
+  "homepage": "https://github.com/ThoughtWorksInc/now#readme"
+}
