@@ -4,6 +4,8 @@
   "description": "Website for ThoughtWorks NOW (Network of Women)",
   "main": "index.js",
   "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/ThoughtWorksInc/now/issues"
   },
-  "homepage": "https://github.com/ThoughtWorksInc/now#readme"
+  "homepage": "https://github.com/ThoughtWorksInc/now#readme",
+  "dependencies": {
+    "gatsby": "^2.3.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }

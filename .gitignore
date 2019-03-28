@@ -1,0 +1,6 @@
+# obviously
+node_modules
+
+# gatsby internal files which are made during build and development
+.cache
+public
