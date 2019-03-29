@@ -1,5 +1,6 @@
 import React from "react";
+import Layout from "../components/layout";
 
-const index = () => <div>Hello World</div>;
+const index = () => <Layout />;
 
 export default index;
