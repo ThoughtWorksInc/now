@@ -4,18 +4,21 @@ h2 {
 }
 
 .top-nav {
+  position: sticky;
   display: flex;
   flex-direction: row;
   align-items: center;
   vertical-align: middle;
   justify-content: space-between;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
   background: #f2f2f2;
   opacity: 0.75;
-  overflow: hidden;
   height: 50px;
   padding: 0.6rem;
+}
+
+.top-nav h3 {
+  color: #222;
 }
 
 .headerLogo {
@@ -33,7 +36,19 @@ h2 {
 }
 
 .menu > li {
+  height: 100%;
   margin: 0 1rem;
+  /* padding: 0px; */
+}
+/* 
+.menu li:hover {
+  background-color: #b38600;
+}*/
+
+.menu li a {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .menu-button-container {
@@ -127,7 +142,7 @@ h2 {
     padding: 0.5em 0;
     width: 100%;
     color: white;
-    background-color: #222;
+    background-color: #b38600;
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
