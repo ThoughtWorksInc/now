@@ -12,6 +12,10 @@ footer {
   grid-area: footer;
 }
 
+body {
+  margin: 0%;
+}
+
 header {
   grid-area: header;
   position: fixed;
@@ -21,4 +25,8 @@ header {
 .container {
   grid-area: article;
   position: relative;
+}
+
+section {
+  padding: 0%;
 }
