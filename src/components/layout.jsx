@@ -13,10 +13,7 @@ const links = [
 const Layout = ({ children }) => (
   <div className="site-layout">
     <Header title="NOW Germany" campaignDate="21 May 2019" links={links} />
-    <div className="container">
-      <h1>This is my section</h1>
-      {children}
-    </div>
+    <div className="container">{children}</div>
     <footer>This is my footer</footer>
   </div>
 );
