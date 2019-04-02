@@ -6,9 +6,9 @@ section: main
 
 # Network of Women
 
-1st Edition
+1<sup>st</sup> Edition
 
 ## Road Not Taken
 
-9th Mar 2019
+9th Mar 2019  
 ThoughtWorks, Cologne

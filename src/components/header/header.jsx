@@ -24,8 +24,10 @@ const Header = ({ title, campaignDate, links }) => {
   return (
     <section className="top-nav">
       <img src={logo} className="headerLogo" alt="ThoughtWorks logo" />
-      {title && <h3>{title}</h3>}
-      {campaignDate && <h4>{campaignDate}</h4>}
+      <div style={{ display: "inline" }}>
+        {title && <h3>{title}</h3>}
+        {campaignDate && <h4>{campaignDate}</h4>}
+      </div>
       {links && constructMenu(links)}
     </section>
   );
