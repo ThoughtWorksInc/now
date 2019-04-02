@@ -6,15 +6,13 @@ const constructMenu = links => {
   return (
     <>
       <input id="menu-toggle" type="checkbox" />
-      <label class="menu-button-container" for="menu-toggle">
-        <div class="menu-button" />
+      <label className="menu-button-container" htmlFor="menu-toggle">
+        <div className="menu-button" />
       </label>
-      <ul class="menu">
+      <ul className="menu">
         {links.map(item => (
-          <li>
-            <a key={item.target} href={"#" + item.target}>
-              {item.name}
-            </a>
+          <li key={item}>
+            <a href={"#" + item}>{item}</a>
           </li>
         ))}
       </ul>
@@ -24,7 +22,7 @@ const constructMenu = links => {
 
 const Header = ({ title, campaignDate, links }) => {
   return (
-    <section class="top-nav">
+    <section className="top-nav">
       <img src={logo} className="headerLogo" alt="ThoughtWorks logo" />
       {title && <h3>{title}</h3>}
       {campaignDate && <h4>{campaignDate}</h4>}

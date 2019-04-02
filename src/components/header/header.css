@@ -1,8 +1,3 @@
-h2 {
-  vertical-align: center;
-  text-align: center;
-}
-
 .top-nav {
   position: sticky;
   display: flex;
@@ -19,6 +14,11 @@ h2 {
 
 .top-nav h3 {
   color: #222;
+}
+
+.top-nav h2 {
+  vertical-align: center;
+  text-align: center;
 }
 
 .headerLogo {
@@ -49,6 +49,7 @@ h2 {
   margin: 0px;
   width: 100%;
   height: 100%;
+  text-transform: capitalize;
 }
 
 .menu-button-container {
