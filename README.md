@@ -13,4 +13,5 @@ Here are the steps for editing in the browser:
 3. You can format the content inside. Here is a [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for reference
 4. You can **Preview** your changes in the `Preview Changes` tab
 5. Once one, at the bottom of the screen you will find a dialog which says **Commit Changes**. Add some notes around what you changed and commit your changes.
-6. Automation should pick it up and in a few minutes the [live site](https://now-de.herokuapp.com/) should be updated.
+6. Automation should pick it up and in a few minutes the [test site](https://test-now-de.herokuapp.com/) should be updated.
+
