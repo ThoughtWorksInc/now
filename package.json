@@ -2,7 +2,6 @@
   "name": "tw-now-website",
   "version": "1.0.0",
   "description": "Website for ThoughtWorks NOW (Network of Women)",
-  "main": "index.js",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -20,6 +19,8 @@
   "homepage": "https://github.com/ThoughtWorksInc/now#readme",
   "dependencies": {
     "gatsby": "^2.3.3",
+    "gatsby-source-filesystem": "^2.0.28",
+    "gatsby-transformer-remark": "^2.3.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
