@@ -1,5 +1,6 @@
 import React from "react";
 import SiteHeader from "./header/header";
+import MobileNavigation from "./header/MobileNavigation";
 import Helmet from "react-helmet";
 import "./layout.css";
 
@@ -10,6 +11,7 @@ const Layout = ({ title, subTitle, description, children, menuEntries }) => (
     </Helmet>
     <SiteHeader title={title} campaignDate={subTitle} links={menuEntries} />
     <div className="container">{children}</div>
+    <MobileNavigation links={menuEntries} />
   </div>
 );
 
