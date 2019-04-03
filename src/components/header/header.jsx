@@ -28,6 +28,10 @@ const Header = styled("header")`
   ::before {
     top: calc(100% - 1px);
   }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const SkipToContent = styled("a")`
@@ -107,6 +111,15 @@ const NavLink = styled(Link)`
   }
 `;
 
+const WebsiteTitle = styled("div")`
+  text-transform: none;
+`;
+
+const WebsiteSubTitle = styled("div")`
+  text-transform: none;
+  color: #d23669;
+`;
+
 const LogoLink = styled("a")`
   display: flex;
   justify-content: center;
@@ -115,6 +128,9 @@ const LogoLink = styled("a")`
   padding: calc(0.5rem - 2px) 0.25rem;
   z-index: 10;
   grid-column-end: -2;
+  @media (max-width: 480px) {
+    grid-column-end: -1;
+  }
 `;
 
 const Logo = styled("img")`
@@ -129,8 +145,15 @@ const SiteHeader = ({ title, campaignDate, links }) => {
       <SkipToContent href="#" id="skip-navigation">
         Skip to Content
       </SkipToContent>
-      <NavLink to="/">{title}</NavLink>
-      <LogoLink href="https://www.thoughtworks.com" rel="noopener noreferrer">
+      <NavLink to="/">
+        <WebsiteTitle>{title}</WebsiteTitle>
+        {campaignDate && <WebsiteSubTitle>{campaignDate}</WebsiteSubTitle>}
+      </NavLink>
+      <LogoLink
+        href="https://www.thoughtworks.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <Logo
           src={logo}
           alt="ThoughtWorks presents: Network of Women"
