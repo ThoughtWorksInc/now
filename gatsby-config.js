@@ -1,10 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `ThoughtWorks - NOW`,
+    title: `N.O.W. Germany`,
+    subTitle: `09 May 2019`,
     description: `ThoughtWorks presents: Network of women!`,
     author: `@thoughtworks_de`
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-transformer-remark`
     },

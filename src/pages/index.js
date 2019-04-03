@@ -15,8 +15,15 @@ const index = ({ data }) => {
     .filter(item => item.showInMenu)
     .map(item => item.section);
 
+  const { title, subTitle = "", description } = data.site.siteMetadata;
+
   return (
-    <Layout menuEntries={menuEntries}>
+    <Layout
+      title={title}
+      subTitle={subTitle}
+      description={description}
+      menuEntries={menuEntries}
+    >
       {sections &&
         sections.map((section, index) => {
           if (section.section === "main") {
@@ -39,6 +46,13 @@ const index = ({ data }) => {
 
 export const query = graphql`
   query HomepageQuery {
+    site {
+      siteMetadata {
+        title
+        subTitle
+        description
+      }
+    }
     allMarkdownRemark(sort: { fields: [frontmatter___order], order: ASC }) {
       edges {
         node {
