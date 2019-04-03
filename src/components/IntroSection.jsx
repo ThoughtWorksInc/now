@@ -5,7 +5,11 @@ import IntroStyles from "./intro.module.css";
 
 const IntroSection = ({ html }) => (
   <SingleColumnContainer id="main">
-    <a href="https://www.thoughtworks.com" rel="nofollow" target="_blank">
+    <a
+      href="https://www.thoughtworks.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
       <img style={{ height: "4rem" }} src={twLogo} alt="ThoughtWorks logo" />
     </a>
     <div

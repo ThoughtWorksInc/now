@@ -1,12 +1,17 @@
 import React from "react";
-import Header from "./header/header";
+import SiteHeader from "./header/header";
+import MobileNavigation from "./header/MobileNavigation";
+import Helmet from "react-helmet";
 import "./layout.css";
 
-const Layout = ({ children, menuEntries }) => (
-  <div className="site-layout">
-    <Header title="N.O.W. Germany" links={menuEntries} />
+const Layout = ({ title, subTitle, description, children, menuEntries }) => (
+  <div>
+    <Helmet htmlAttributes={{ lang: "en" }} title={title}>
+      <meta name="description" content={description} />
+    </Helmet>
+    <SiteHeader title={title} campaignDate={subTitle} links={menuEntries} />
     <div className="container">{children}</div>
-    <footer>This is my footer</footer>
+    <MobileNavigation links={menuEntries} />
   </div>
 );
 
