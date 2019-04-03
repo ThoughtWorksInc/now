@@ -26,7 +26,7 @@ const index = ({ data }) => {
               <SingleColumnContainer
                 id={section.section}
                 key={section.section}
-                bgColor={index % 2 == 0 ? "black" : "rebeccapurple"}
+                bgColor={index % 2 === 0 ? "black" : "rebeccapurple"}
               >
                 <div dangerouslySetInnerHTML={{ __html: section.html }} />
               </SingleColumnContainer>
