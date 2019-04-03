@@ -11,8 +11,10 @@ const Header = styled("header")`
   right: 0;
   top: 0;
   z-index: 1000;
-  display: flex;
-  flex-direction: row
+  display: grid;
+  align-items: center;
+  align-contents: center;
+  grid-template-columns: repeat(3, 1fr);
   ::before,
   ::after {
     content: "";
@@ -58,11 +60,15 @@ const SkipToContent = styled("a")`
 
 const Nav = styled("nav")`
   display: flex;
+  grid-column-end: -1;
   font-size: 0.875rem;
-  justify-content: flex-end;
   margin: 0;
-  position: relative;
+  justify-content: end;
+  float: right;
   z-index: 5;
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -101,19 +107,19 @@ const NavLink = styled(Link)`
   }
 `;
 
-const LogoLink = styled(NavLink)`
-  border: 0;
-
-  padding: 0;
-  position: relative;
-
+const LogoLink = styled("a")`
+  display: flex;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-radius: 0;
+  padding: calc(0.5rem - 2px) 0.25rem;
   z-index: 10;
+  grid-column-end: -2;
 `;
 
 const Logo = styled("img")`
   padding: 0;
-  position: absolute;
-  width: 10vw;
+  width: 200px;
   z-index: 2;
 `;
 
@@ -123,22 +129,18 @@ const SiteHeader = ({ title, campaignDate, links }) => {
       <SkipToContent href="#" id="skip-navigation">
         Skip to Content
       </SkipToContent>
-      <LogoLink to="/">
+      <NavLink to="/">{title}</NavLink>
+      <LogoLink href="https://www.thoughtworks.com" rel="noopener noreferrer">
         <Logo
           src={logo}
           alt="ThoughtWorks presents: Network of Women"
           // This keeps the logo from flashing at full-width on fresh loads.
-          // style={{ maxWidth: "42px" }}
+          style={{ maxWidth: "200px" }}
         />
       </LogoLink>
       <Nav>
         {links.map(item => (
-          <NavLink
-            key={item}
-            to={`/#${item}`}
-            className="text-sharp"
-            activeClassName="active"
-          >
+          <NavLink key={item} to={`/#${item}`} activeClassName="active">
             {item}
           </NavLink>
         ))}
