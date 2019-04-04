@@ -1,6 +1,6 @@
 ---
 showInMenu: true
-order: 5
+order: 6
 section: location
 googleMapPlusCode:
 ---

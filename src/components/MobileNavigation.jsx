@@ -4,12 +4,19 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 import colors from "../themes/colors";
 
+import CalendarIcon from "../assets/icons/calendar.svg";
+import RegisterIcon from "../assets/icons/edit.svg";
+import HomeIcon from "../assets/icons/home.svg";
+import SpeakerIcon from "../assets/icons/woman.svg";
+import LocationIcon from "../assets/icons/location.svg";
+import BrokenIcon from "../assets/icons/dotted-box.svg";
+
 const Footer = styled("footer")`
-  @media (not (max-width: 480px)) {
-    display: none;
-  }
+  display: none;
+
   @media (max-width: 480px) {
     display: flex;
+    justify-content: space-evenly;
     background-color: white;
     left: 0;
     position: fixed;
@@ -37,8 +44,7 @@ const Nav = styled("nav")`
   grid-column-end: -1;
   font-size: 0.875rem;
   margin: 0;
-  justify-content: end;
-  float: right;
+  justify-content: space-evenly;
   z-index: 5;
 `;
 
@@ -47,7 +53,10 @@ const NavLink = styled(Link)`
   border-radius: 0;
   color: "black";
   font-weight: 900;
-  line-height: 1.25;
+  font-size: x-small;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0;
   padding: calc(0.5rem - 2px) 0.25rem;
   text-decoration: none;
@@ -78,12 +87,34 @@ const NavLink = styled(Link)`
   }
 `;
 
+const findRelevantIcon = menuEntry => {
+  switch (menuEntry.toUpperCase()) {
+    case "LOCATION":
+      return LocationIcon;
+
+    case "ABOUT":
+      return HomeIcon;
+
+    case "SCHEDULE":
+      return CalendarIcon;
+
+    case "SPEAKERS":
+      return SpeakerIcon;
+
+    case "REGISTER":
+      return RegisterIcon;
+    default:
+      return BrokenIcon;
+  }
+};
+
 const MobileNavigation = ({ links }) => {
   return (
     <Footer role="banner">
       <Nav>
         {links.map(item => (
           <NavLink key={item} to={`/#${item}`} activeClassName="active">
+            <img src={findRelevantIcon(item)} alt={item} />
             {item}
           </NavLink>
         ))}
