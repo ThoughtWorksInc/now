@@ -2,7 +2,24 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import IntroSection from "../components/IntroSection";
-import SingleColumnContainer from "../components/SingleColumnContainer";
+import SectionContainer from "../components/SectionContainer";
+
+const createAppropriateSection = (index, { section, html }) => {
+  switch (section.toUpperCase()) {
+    case "MAIN":
+      return <IntroSection html={html} index={index} key={section} />;
+
+    default:
+      return (
+        <SectionContainer
+          id={section}
+          key={section}
+          index={index}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      );
+  }
+};
 
 const index = ({ data }) => {
   const sections = data.allMarkdownRemark.edges.map(item => {
@@ -26,19 +43,7 @@ const index = ({ data }) => {
     >
       {sections &&
         sections.map((section, index) => {
-          if (section.section === "main") {
-            return <IntroSection html={section.html} key={section.section} />;
-          } else {
-            return (
-              <SingleColumnContainer
-                id={section.section}
-                key={section.section}
-                bgColor={index % 2 === 0 ? "black" : "rebeccapurple"}
-              >
-                <div dangerouslySetInnerHTML={{ __html: section.html }} />
-              </SingleColumnContainer>
-            );
-          }
+          return createAppropriateSection(index, section);
         })}
     </Layout>
   );

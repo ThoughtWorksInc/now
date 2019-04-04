@@ -47,5 +47,7 @@ export default {
   grayAlphaExtra: "rgba(214, 209, 230, 0.25)",
   warning: colors.red700,
   textWarning: colors.red900,
-  warningBackground: colors.red100
+  warningBackground: colors.red100,
+  sectionEven: "black",
+  sectionOdd: "rebeccapurple"
 };

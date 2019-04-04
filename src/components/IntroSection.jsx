@@ -1,22 +1,18 @@
 import React from "react";
-import twLogo from "../assets/images/tw-logo-white.png";
-import SingleColumnContainer from "./SingleColumnContainer";
-import IntroStyles from "./intro.module.css";
+import styled from "@emotion/styled";
+import SectionContainer from "./SectionContainer";
 
-const IntroSection = ({ html }) => (
-  <SingleColumnContainer id="main">
-    <a
-      href="https://www.thoughtworks.com"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <img style={{ height: "4rem" }} src={twLogo} alt="ThoughtWorks logo" />
-    </a>
-    <div
-      className={IntroStyles.intro}
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
-  </SingleColumnContainer>
+const IntroContainer = styled(SectionContainer)`
+  & h1 {
+    font-size: 4.5rem;
+  }
+`;
+
+const IntroSection = ({ html, index }) => (
+  <IntroContainer
+    id="main"
+    index={index}
+    dangerouslySetInnerHTML={{ __html: html }}
+  />
 );
-
 export default IntroSection;
