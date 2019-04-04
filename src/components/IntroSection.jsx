@@ -1,5 +1,5 @@
 import React from "react";
-import twLogo from "../images/tw-logo-white.png";
+import twLogo from "../assets/images/tw-logo-white.png";
 import SingleColumnContainer from "./SingleColumnContainer";
 import IntroStyles from "./intro.module.css";
 

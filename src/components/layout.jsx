@@ -1,6 +1,6 @@
 import React from "react";
-import SiteHeader from "./header/header";
-import MobileNavigation from "./header/MobileNavigation";
+import SiteHeader from "./header";
+import MobileNavigation from "./MobileNavigation";
 import Helmet from "react-helmet";
 import "./layout.css";
 
