@@ -6,7 +6,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "gatsby build"
+    "heroku-postbuild": "gatsby build",
+    "deploy": "gatsby build --prefix-paths"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "eslint-config-react-app": "^3.0.8"
+    "eslint-config-react-app": "^3.0.8",
+    "gh-pages": "^2.0.1"
   }
 }

@@ -5,6 +5,7 @@ module.exports = {
     description: `ThoughtWorks presents: Network of women!`,
     author: `@thoughtworks_de`
   },
+  pathPrefix: "/now",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
