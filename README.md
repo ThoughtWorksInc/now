@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ThoughtWorksInc/now.svg?branch=master)](https://travis-ci.org/ThoughtWorksInc/now)
+
 # Purpose
 
 This repo will serve as the source code for generating the static website for the German chapter of Network of Women (N.O.W.)
