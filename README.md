@@ -17,3 +17,28 @@ Here are the steps for editing in the browser:
 5. Once one, at the bottom of the screen you will find a dialog which says **Commit Changes**. Add some notes around what you changed and commit your changes.
 6. Automation should pick it up and in a few minutes the [test site](https://test-now-de.herokuapp.com/) should be updated.
 
+## Running Project
+
+First we needt to install node modules with this command
+
+```
+npm install
+```
+
+For running system in development mode
+
+```
+npm run develop
+```
+
+You can now view tw-now-website in the browser.
+
+```
+http://localhost:8000/
+```
+
+View GraphiQL, an in-browser IDE, to explore your site's data and schema
+
+```
+http://localhost:8000/___graphql
+```
