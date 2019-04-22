@@ -8,9 +8,9 @@ const SectionContainer = styled("div")`
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: ${props =>
-    (props.index && props.index % 2) === 0
-      ? colors.sectionEven
-      : colors.sectionOdd};
+    (props.index == 0) ? "none" : (props.index && props.index % 2) === 0
+        ? colors.sectionEven
+        : colors.sectionOdd};
   color: ${colors.lightest};
   text-align: center;
 `;

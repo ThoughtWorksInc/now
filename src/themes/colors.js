@@ -48,6 +48,7 @@ export default {
   warning: colors.red700,
   textWarning: colors.red900,
   warningBackground: colors.red100,
-  sectionEven: "black",
-  sectionOdd: "rebeccapurple"
+  sectionEven: "#85b880",
+  sectionOdd: "#808184"
+
 };
